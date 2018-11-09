@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/messages');
-// var userRoutes = require('./routes/users');
+var userRoutes = require('./routes/user');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/node-angular', { useNewUrlParser: true });
@@ -33,8 +33,8 @@ app.use(function (req, res, next) {
 });
 
 app.use('/message', messageRoutes);
+app.use('/user', userRoutes);
 app.use('/', appRoutes);
-// app.use('/', userRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
