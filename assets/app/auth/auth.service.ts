@@ -3,7 +3,7 @@ import { Http, Headers, Response } from "@angular/http";
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Rx';
 
-import { User } from "./user.model.ts";
+import { User } from "./user.model";
 import { ErrorService } from "../errors/error.service";
 
 @Injectable()
